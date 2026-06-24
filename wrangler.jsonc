@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "pinzan-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-24",
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    "crons": ["0 * * * *"]
+  },
+  "vars": {
+    "PZHTTP_ACCOUNTS": "18888888888\n19999999999",
+    "PZHTTP_PASSWORDS": "password\npassword",
+    "MANUAL_RUN_TOKEN": "change-me",
+    "RUN_INTERVAL_HOURS": "170"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SIGNIN_STATE"
+    }
+  ]
+}
