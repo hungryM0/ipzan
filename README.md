@@ -1,6 +1,6 @@
 # ipzan-worker
 
-品赞 HTTP 代理每周自动签到的 Cloudflare Worker 版本。
+品赞 HTTP 代理每周自动签到
 
 > 原仓库地址：https://github.com/yunjietu/pinzan
 
