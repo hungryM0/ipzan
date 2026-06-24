@@ -3,6 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "cloudflare": {
+    "bindings": {
+      "PZHTTP_ACCOUNTS": {
+        "description": "品赞账号列表。多个账号用 \\n 分隔，例如 18888888888\\n19999999999。"
+      },
+      "PZHTTP_PASSWORDS": {
+        "description": "品赞密码列表。顺序必须和账号一一对应，多个密码用 \\n 分隔。"
+      },
+      "MANUAL_RUN_TOKEN": {
+        "description": "手动触发签到的 Bearer Token，请改成随机字符串！"
+      },
+      "RUN_INTERVAL_HOURS": {
+        "description": "两次成功签到之间的最小间隔（小时）"
+      }
+    }
+  },
   "scripts": {
     "typecheck": "tsc --noEmit",
     "cf-typegen": "wrangler types",

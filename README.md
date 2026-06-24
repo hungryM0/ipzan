@@ -15,7 +15,9 @@
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/hungryM0/ipzan)
 
-账号和密码按行一一对应
+部署页只需要填写环境变量，不需要再填写环境机密。
+
+账号和密码按顺序一一对应，多个账号或密码用 `\n` 分隔。
 
 ## 功能
 
@@ -45,8 +47,8 @@ flowchart TD
 ```jsonc
 {
   "vars": {
-    "PZHTTP_ACCOUNTS": "18888888888\n19999999999",
-    "PZHTTP_PASSWORDS": "password\npassword",
+    "PZHTTP_ACCOUNTS": "18888888888\\n19999999999",
+    "PZHTTP_PASSWORDS": "password\\npassword",
     "MANUAL_RUN_TOKEN": "change-me",
     "RUN_INTERVAL_HOURS": "170"
   }
@@ -57,8 +59,8 @@ flowchart TD
 
 | 变量 | 默认值 | 说明 |
 | --- | --- | --- |
-| `PZHTTP_ACCOUNTS` | 示例手机号 | 账号列表，一行一个 |
-| `PZHTTP_PASSWORDS` | 示例密码 | 密码列表，一行一个 |
+| `PZHTTP_ACCOUNTS` | 示例手机号 | 账号列表，多个账号用 `\n` 分隔 |
+| `PZHTTP_PASSWORDS` | 示例密码 | 密码列表，顺序和账号对应，多个密码用 `\n` 分隔 |
 | `MANUAL_RUN_TOKEN` | `change-me` | 手动触发接口的 Bearer Token |
 | `RUN_INTERVAL_HOURS` | `170` | 同一账号两次成功签到之间的最小间隔（小时） |
 
