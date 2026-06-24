@@ -15,8 +15,6 @@
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/hungryM0/ipzan)
 
-部署页只需要填写环境变量，不需要再填写环境机密。
-
 账号和密码按顺序一一对应，多个账号或密码用 `\n` 分隔。
 
 ## 功能
